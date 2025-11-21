@@ -180,6 +180,7 @@ const UserBadge = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: default;
 `;
 
 const Username = styled.span`
@@ -638,10 +639,6 @@ const BoardSystem = () => {
       return;
     }
 
-    if (currentBoard === 'notice' && !formData.author) {
-      alert('작성자명을 입력해주세요.');
-      return;
-    }
 
     try {
       const response = await fetch(`${API_URL}/${currentBoard}`, {
@@ -927,12 +924,6 @@ const BoardSystem = () => {
 
                 {currentBoard === 'notice' && (
                   <>
-                    <Input
-                      type="text"
-                      placeholder="작성자명"
-                      value={formData.author}
-                      onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                    />
                     <CheckboxLabel>
                       <Checkbox
                         type="checkbox"
