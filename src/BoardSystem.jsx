@@ -712,7 +712,7 @@ const BoardSystem = () => {
         <CenteredContainer>
           <AuthCard>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-              <AuthTitle>🔥 쌈뽕 게시판</AuthTitle>
+              <AuthTitle>게시판</AuthTitle>
               <AuthSubtitle>로그인하여 게시판을 이용하세요</AuthSubtitle>
             </div>
 
@@ -774,7 +774,7 @@ const BoardSystem = () => {
     <PageContainer>
       <MainContainer>
         <Header>
-          <MainTitle>🔥 쌈뽕 게시판</MainTitle>
+          <MainTitle>게시판</MainTitle>
           <MainSubtitle>세 가지 게시판으로 소통하세요</MainSubtitle>
           <UserInfo>
             <UserBadge>
