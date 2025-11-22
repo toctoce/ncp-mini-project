@@ -566,6 +566,11 @@ const BoardSystem = () => {
         body: JSON.stringify(authForm)
       });
 
+      const webServer = response.headers.get('X-Web-Server');
+      // const wasServer = response.headers.get('X-Server-Name');
+      console.log(`🌍 Connected Web Server: ${webServer}`);
+      // console.log(`⚙️ Connected WAS Server: ${wasServer}`);
+
       const data = await response.json();
 
       if (response.ok) {
