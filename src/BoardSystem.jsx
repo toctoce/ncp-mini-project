@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { MessageSquare, Users, Bell, Eye, Trash2, X, AlertCircle, LogOut, User } from 'lucide-react';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = 'http://mini-project-6-lb1-xxxx.kr.lb.naverncp.com';
 
 // Styled Components
 const PageContainer = styled.div`
