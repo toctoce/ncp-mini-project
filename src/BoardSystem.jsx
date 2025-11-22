@@ -540,6 +540,12 @@ const BoardSystem = () => {
       const response = await fetch(`${API_URL}/auth/check`, {
         credentials: 'include'
       });
+
+      const webServer = response.headers.get('X-Web-Server');
+      const wasServer = response.headers.get('X-Server-Name');
+      console.log(`🌍 Connected Web Server: ${webServer}`);
+      console.log(`⚙️ Connected WAS Server: ${wasServer}`);
+
       const data = await response.json();
       if (data.isAuthenticated) {
         setIsAuthenticated(true);
@@ -565,11 +571,6 @@ const BoardSystem = () => {
         credentials: 'include',
         body: JSON.stringify(authForm)
       });
-
-      const webServer = response.headers.get('X-Web-Server');
-      // const wasServer = response.headers.get('X-Server-Name');
-      console.log(`🌍 Connected Web Server: ${webServer}`);
-      // console.log(`⚙️ Connected WAS Server: ${wasServer}`);
 
       const data = await response.json();
 
